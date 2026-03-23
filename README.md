@@ -4,6 +4,14 @@ This project is a front-end web application developed as part of a Web Developme
 
 ---
 
+## How to Run
+
+1. Download or clone the repository
+2. Open `register.html` or `band_register.html` in your browser
+3. Fill out the forms and test validation
+
+---
+
 ## Features
 
 ### User Registration
