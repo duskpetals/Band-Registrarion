@@ -1,0 +1,230 @@
+/* It's configs are reused at multiple places, so I named it in a non-specific way like this */
+.pretty-btn {
+  background-color: #af8fa7;
+  border: none;
+  color: #fdfdfd;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.pretty-btn:hover {
+  background-color: #fcd8cf;
+  transform: translateY(-2px);
+}
+
+.pretty-btn:active {
+  background-color: #2c68c28a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+/* Dropdown menu for country selection */
+.dropdown {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-menu {
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e6d2e9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Country dropdown button */
+.pretty-btn.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #cda7cc;
+  color: white;
+}
+
+.dropdown-item {
+  color: #4a235a;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  background-color: #f8e0f0;
+  color: #4a235a;
+}
+
+.pretty-btn.rounded-pill.shadow-sm {
+  display: block;
+  margin: 0 auto;
+}
+
+/* To make the radio buttons prettier, and not just Windows XP - like */
+.gender {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.gender input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #655f95;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gender input[type="radio"]:checked {
+  background-color: #af8fa7;
+  box-shadow: 0 0 0 3px #f2b4b4;
+}
+
+.gender input[type="radio"]:hover {
+  transform: scale(1.1);
+}
+
+.gender label {
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Form containers */
+form {
+  background-image: url("https://images5.alphacoders.com/132/1327980.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 60px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #fff; /* makes text visible */
+}
+
+/* Alternative background for band registration so that it's more interactive */
+form.alt-bg {
+  background-image: url("https://wallpapers-max.b-cdn.net/wallpapers/1sep2023/hd/aesthetic-clouds-and-pink-sky-wallpaper.jpg");
+}
+
+/* Form labels */
+form label {
+  display: block;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+/* Input boxes */
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form input[type="url"],
+form input[type="date"],
+form input[type="tel"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ecdef7;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+/* On focus: soft glow & color shift */
+form input:focus {
+  border-color: #ecdef7;
+  box-shadow: 0 0 6px rgba(167, 139, 207, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Headings */
+form h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #ecdef7;
+  margin-bottom: 20px;
+}
+
+/* Alternative heading color for band registration to fit the changed  background*/
+form.alt-bg h1 {
+  color: #c583ac;                          /* make heading visible */
+}
+
+/* Paragraphs */
+form p {
+  text-align: center;
+  color: #ecdef7;
+}
+
+/* Alternative paragraph color for band registration to fit the changed background. Everything else remains common between the two formats though. */
+form.alt-bg p {
+  color: #f2b4b4;
+}
+
+/* I wanted to remove the up-and-down arrows from number input fields so I found this.*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+}
+
+/* "Register" button */
+.top-link-btn {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 1000;  /*  Ensure it stays above other elements. An element with greater stack order is always in front of an element with a lower stack order. */
+  background-color: #f2b4b4;
+  color: #fcfcfc;
+  font-weight: 500;   /* The font-weight CSS property sets the weight (or boldness) of the font. */
+  padding: 8px 18px;
+  border-radius: 25px;    /*The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners. */
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.top-link-btn:hover {
+  background-color: #655f95;
+  transform: translateY(-2px);  /* The translateY CSS function repositions an element along the Y-axis by a given amount. A positive value moves the element down, while a negative value moves it up. */
+  text-decoration: none;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+  header .container {
+    padding-top: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 320px) {
+  .navbar-brand span {
+    display: none;
+  }
+}
+

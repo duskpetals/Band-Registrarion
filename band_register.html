@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <title>Register Band</title>
+    <script src="scripts.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous" >
+    <link rel="stylesheet" href="style.css" >
+
+    <!-- Bootstrap JS for pretty dropdown -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--A TOGGLE TAKING YOU TO USER REGISTRATION PAGE-->
+    <a href="register.html" class="top-link-btn pretty-btn">User Registration</a>
+    <!--THEN THE BAND REG FORM-->
+    <form class="alt-bg" action="action_page.php">
+        <div class="container">
+            <h1>Register Band</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr >
+            <div>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="Username" id="username"
+                    pattern="^[A-Za-z][A-Za-z0-9_]{5,}$"
+                    title="Must start with a letter and be at least 6 characters (letters, numbers, underscores)."
+                    required >
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" id="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address." required >
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw"
+                    pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}$"
+                    title="8–14 chars, at least one uppercase letter, one number, and one special symbol." required >
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"
+                    pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}$"
+                    title="8–14 chars, at least one uppercase letter, one number, and one special symbol." required >
+                <label for="band_name"><b>Band Name</b></label>
+                <input type="text" placeholder="Enter Band Name" name="Band Name" id="band_name"
+                    pattern="^[A-Za-zΑ-Ωα-ω ]{3,30}$" title="3–30 letters, no numbers." required >
+                <label for="music_genres"><b>Music Genre</b></label>
+                <input type="text" placeholder="Enter Music Genre" name="Music Genre" id="music_genres"
+                    pattern="^[A-Za-zΑ-Ωα-ω ]{3,200}$" title="3–200 letters, no numbers." required >
+                <label for="band_description"><b>Band Description</b></label>
+                <input type="text" placeholder="Enter Band Description" name="Band Description" id="band_description"
+                    pattern="^[A-Za-zΑ-Ωα-ω ]{3,200}$" title="3–200 letters, no numbers." required >
+                <label for="members_number"><b>Number of Members</b></label>
+                <input type="number" placeholder="Enter Number of Members" name="Number of Members" id="members_number"
+                    min="1" max="10" title="Number should be 1-10" required >
+                <label for="foundedYear"><b>Founded Year</b></label>
+                <input type="number" placeholder="Enter Founded Year" name="Founded Year" id="foundedYear"
+                    min="1960" max="2025" title="Year between 1960-2025." required >
+                <label for="band_city"><b>Band City</b></label>
+                <input type="text" id="band_city" name="Band City" placeholder="Enter Band City"
+                    pattern="^[A-Za-zΑ-Ωα-ω ]{3,30}$" title="3–30 letters." required>
+                <label for="phone"><b>Phone</b></label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Phone" inputmode="numeric"
+                    pattern="^\d{10,14}$" title="Must start with 6 or 2 and contain 10–14 digits total." required >
+                <label for="webpage"><b>Webpage</b></label>
+                <input type="url" id="webpage" name="webpage" placeholder="https://webpage.com" pattern="https?://.+"
+                    title="Must start with http:// or https:// and include a valid domain." >
+                <label for="photo"><b>Photo</b></label>
+                <input type="url" id="photo" name="photo" placeholder="https://source.com" pattern="https?://.+"
+                    title="Must start with http:// or https:// and include a valid domain." >
+            </div>
+            <hr >
+            <button class="pretty-btn rounded-pill shadow-sm">Register</button>
+      </div>
+      <div class=" container signin">
+                <p>
+                    By creating an account you agree to our
+                    <a href="#" style="color: rgb(155, 205, 228)">Terms & Privacy</a>.
+                </p>
+                <p>Already have an account? <a href="signin.html">Sign in</a>.</p>
+        </div>
+    </form>
+</body>
+</html>
